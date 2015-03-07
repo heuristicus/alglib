@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['quicksort_2ecpp',['quicksort.cpp',['../quicksort_8cpp.html',1,'']]],
-  ['quicksort_2ehpp',['quicksort.hpp',['../quicksort_8hpp.html',1,'']]]
+  ['bubblesort_2ecpp',['bubbleSort.cpp',['../bubbleSort_8cpp.html',1,'']]],
+  ['bubblesort_2ehpp',['bubbleSort.hpp',['../bubbleSort_8hpp.html',1,'']]],
+  ['bubblesort_5ftest_2ecpp',['bubbleSort_test.cpp',['../bubbleSort__test_8cpp.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main',['main',['../quicksort_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'quicksort.cpp']]]
+  ['bubblesort',['bubbleSort',['../namespacesorts.html#a29e9453bec4a8d7e108cf635731b23e4',1,'sorts']]]
 ];
