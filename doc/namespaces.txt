@@ -1,0 +1,17 @@
+/**
+ * @namespace sorts
+ * @brief Contains functions to do with sorting.
+ *
+ */
+
+/**
+ * @namespace tests
+ * @brief Functions for testing code using the GTest framework
+ *  
+ */
+
+/**
+ * @namespace tests::sorts
+ * @brief Functions for testing sorting code
+ *  
+ */

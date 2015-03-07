@@ -1,0 +1,122 @@
+/**
+ * @file   bubbleSort_test.cpp
+ * @author Michal Staniaszek <michalst@kth.se>
+ * @date   Sat Mar  7 20:29:14 2015
+ * 
+ * @brief  Tests for sorts::bubbleSort implementation
+ * 
+ * Tests for Bubblesort.
+ */
+#include "sorts/bubbleSort.hpp"
+#include <gtest/gtest.h>
+
+
+namespace tests {
+    namespace sorts {
+        /** 
+         * Test that bubbleSort() works for the positive numbers
+         * 
+         */
+	TEST(bubbleSortTest, positiveNos) { 
+	    int unsorted[] = {10, 5, 2, 3, 1, 4, 9, 6, 7, 8};
+	    int sorted[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+	    int size = sizeof(unsorted) / sizeof(*unsorted);
+    
+	    sorts::bubbleSort(unsorted, size);
+
+	    for (int i = 0; i < size; i++) {
+		ASSERT_EQ(unsorted[i], sorted[i]);
+	    }
+	}
+
+
+        /** 
+         * Test that bubbleSort() works with negative numbers
+         * 
+         */
+	TEST(bubbleSortTest, negativeNos) { 
+	    int unsorted[] = {-5, -2, -3, -1, -4, -9, -6, -7, -8, -10};
+	    int sorted[] = {-10, -9, -8, -7, -6, -5, -4, -3, -2, -1};
+
+	    int size = sizeof(unsorted) / sizeof(*unsorted);
+    
+	    sorts::bubbleSort(unsorted, size);
+
+	    for (int i = 0; i < size; i++) {
+		ASSERT_EQ(unsorted[i], sorted[i]);
+	    }
+	}
+
+        /** 
+         * Test that bubbleSort() has the expected behaviour when \p array has a single
+         * element
+         *
+         */
+	TEST(bubbleSortTest, edgeCases_oneElement) { 
+	    int unsorted[] = {2};
+	    int sorted[] = {2};
+
+	    int size = sizeof(unsorted) / sizeof(*unsorted);
+    
+	    sorts::bubbleSort(unsorted, size);
+
+	    for (int i = 0; i < size; i++) {
+		ASSERT_EQ(unsorted[i], sorted[i]);
+	    }
+	}
+
+        /** 
+         * Test that bubbleSort() has the expected behaviour when \p array has two
+         * elements
+         * 
+         */
+	TEST(bubbleSortTest, edgeCases_twoElement) { 
+	    int unsorted1[] = {4, 2};
+	    int unsorted2[] = {2, 4};
+	    int sorted[] = {2, 4};
+
+	    int size = sizeof(unsorted1) / sizeof(*unsorted1);
+    
+	    sorts::bubbleSort(unsorted1, size);
+	    sorts::bubbleSort(unsorted2, size);
+
+	    for (int i = 0; i < size; i++) {
+		ASSERT_EQ(unsorted1[i], sorted[i]);
+		ASSERT_EQ(unsorted2[i], sorted[i]);
+	    }
+	}
+
+
+        /** 
+         * Test that bubbleSort() has the expected behaviour when the \p size given is
+         * smaller than the length of \p array
+         * 
+         */
+	TEST(bubbleSortTest, edgeCases_smallerSize) { 
+	    int unsorted[] = {10, 5, 2, 3, 1, 4, 9, 6, 7, 8};
+	    int sorted[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+	    int size = sizeof(unsorted) / sizeof(*unsorted);
+    
+	    sorts::bubbleSort(unsorted, size);
+
+	    for (int i = 0; i < size; i++) {
+		ASSERT_EQ(unsorted[i], sorted[i]);
+	    }
+	}
+
+        /** 
+         * Test that bubbleSort() has the expected behaviour when the \p size given is
+         * negative
+         *
+         */
+	TEST(bubbleSortTest, edgeCases_negativeSize) { 
+	    int unsorted[] = {4, 2, 3, 5, 1, 7};
+
+	    ASSERT_THROW(sorts::bubbleSort(unsorted, -1), std::invalid_argument);
+	    ASSERT_THROW(sorts::bubbleSort(unsorted, 0), std::invalid_argument);
+	}
+	
+    } // namespace sorts
+} // namespace tests

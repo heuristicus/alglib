@@ -3,7 +3,6 @@
 @author Michal Staniaszek
 @file
 */
-/** @defgroup This is the group */
 /**
 @mainpage alglib - writing standard algorithms for fun
 This is the main page.
