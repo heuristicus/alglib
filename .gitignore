@@ -26,3 +26,18 @@
 *.exe
 *.out
 *.app
+
+# ignore doxygen output in the html directory
+html/
+
+# ignore emacs stuff
+*~
+\#*
+.\#*
+
+# ignore cmake stuff
+CMakeCache.txt
+CMakeFiles
+Makefile
+cmake_install.cmake
+install_manifest.txt
