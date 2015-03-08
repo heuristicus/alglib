@@ -40,6 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -95,19 +96,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>Headers for bubble sort.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdexcept&gt;</code><br/>
+<code>#include &lt;functional&gt;</code><br/>
+<code>#include &lt;vector&gt;</code><br/>
+<code>#include &lt;iostream&gt;</code><br/>
 </div>
 <p><a href="bubbleSort_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:namespacesorts"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesorts.html">sorts</a></td></tr>
-<tr class="memdesc:namespacesorts"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains functions to do with sorting. <br/></td></tr>
+<tr class="memitem:namespacealglib"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacealglib.html">alglib</a></td></tr>
+<tr class="memdesc:namespacealglib"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main namespace for the project. <br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacealglib_1_1sorts"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacealglib_1_1sorts.html">alglib::sorts</a></td></tr>
+<tr class="memdesc:namespacealglib_1_1sorts"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains functions to do with sorting. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a29e9453bec4a8d7e108cf635731b23e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesorts.html#a29e9453bec4a8d7e108cf635731b23e4">sorts::bubbleSort</a> (int *array, const int size)</td></tr>
-<tr class="separator:a29e9453bec4a8d7e108cf635731b23e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a147b8dfb7743332c08b655b9b2c1f775"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType &gt; </td></tr>
+<tr class="memitem:a147b8dfb7743332c08b655b9b2c1f775"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealglib_1_1sorts.html#a147b8dfb7743332c08b655b9b2c1f775">alglib::sorts::print_arr</a> (const ArrayType *array, const int size)</td></tr>
+<tr class="separator:a147b8dfb7743332c08b655b9b2c1f775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adab97b6142239314080a9571211cd276"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType , typename Compare &gt; </td></tr>
+<tr class="memitem:adab97b6142239314080a9571211cd276"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealglib_1_1sorts.html#adab97b6142239314080a9571211cd276">alglib::sorts::bubbleSort</a> (ArrayType *array, const int size, Compare comp)</td></tr>
+<tr class="separator:adab97b6142239314080a9571211cd276"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1b1080a11b4aeefa794d94ab5d2c08e"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType &gt; </td></tr>
+<tr class="memitem:ab1b1080a11b4aeefa794d94ab5d2c08e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealglib_1_1sorts.html#ab1b1080a11b4aeefa794d94ab5d2c08e">alglib::sorts::bubbleSort</a> (ArrayType *array, const int size)</td></tr>
+<tr class="separator:ab1b1080a11b4aeefa794d94ab5d2c08e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa66a2d461e0c8863ced4a3a33d9fbba7"><td class="memTemplParams" colspan="2">template&lt;typename VectorType &gt; </td></tr>
+<tr class="memitem:aa66a2d461e0c8863ced4a3a33d9fbba7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealglib_1_1sorts.html#aa66a2d461e0c8863ced4a3a33d9fbba7">alglib::sorts::bubbleSort</a> (std::vector&lt; VectorType &gt; &amp;vec)</td></tr>
+<tr class="separator:aa66a2d461e0c8863ced4a3a33d9fbba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a978aa0ec3cb9f43c05bf1e65ce66abbc"><td class="memTemplParams" colspan="2">template&lt;typename VectorType , typename Compare &gt; </td></tr>
+<tr class="memitem:a978aa0ec3cb9f43c05bf1e65ce66abbc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealglib_1_1sorts.html#a978aa0ec3cb9f43c05bf1e65ce66abbc">alglib::sorts::bubbleSort</a> (std::vector&lt; VectorType &gt; &amp;vec, const Compare &amp;comp)</td></tr>
+<tr class="separator:a978aa0ec3cb9f43c05bf1e65ce66abbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Headers for bubble sort. </p>
@@ -116,7 +136,7 @@ Functions</h2></td></tr>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 8 2015 00:02:20 for alglib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 8 2015 23:59:03 for alglib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -40,6 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -85,6 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -92,11 +94,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Tests for <a class="el" href="namespacesorts.html#a29e9453bec4a8d7e108cf635731b23e4">sorts::bubbleSort</a> implementation.  
+<p>Tests for sorts::bubbleSort implementation.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="bubbleSort_8hpp_source.html">sorts/bubbleSort.hpp</a>&quot;</code><br/>
+<code>#include &lt;iostream&gt;</code><br/>
 <code>#include &lt;gtest/gtest.h&gt;</code><br/>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtests_1_1sorts_1_1CustomClass.html">tests::sorts::CustomClass</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacetests"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests.html">tests</a></td></tr>
@@ -108,28 +116,52 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa5ca38ad9c00a1caf814f855540d7973"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests_1_1sorts.html#aa5ca38ad9c00a1caf814f855540d7973">tests::sorts::TEST</a> (bubbleSortTest, positiveNos)</td></tr>
-<tr class="separator:aa5ca38ad9c00a1caf814f855540d7973"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06afa245195527a39942f2cb86a2e10e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests_1_1sorts.html#a06afa245195527a39942f2cb86a2e10e">tests::sorts::TEST</a> (bubbleSortTest, negativeNos)</td></tr>
-<tr class="separator:a06afa245195527a39942f2cb86a2e10e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab318b997c1dd45308ceb9b99b67eb832"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests_1_1sorts.html#ab318b997c1dd45308ceb9b99b67eb832">tests::sorts::TEST</a> (bubbleSortTest, edgeCases_oneElement)</td></tr>
-<tr class="separator:ab318b997c1dd45308ceb9b99b67eb832"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdec1a3b54aa26e2c5eec8d3cf622d3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests_1_1sorts.html#afdec1a3b54aa26e2c5eec8d3cf622d3b">tests::sorts::TEST</a> (bubbleSortTest, edgeCases_twoElement)</td></tr>
-<tr class="separator:afdec1a3b54aa26e2c5eec8d3cf622d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08997c38178b099f8ac38bc190d72cad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests_1_1sorts.html#a08997c38178b099f8ac38bc190d72cad">tests::sorts::TEST</a> (bubbleSortTest, edgeCases_smallerSize)</td></tr>
-<tr class="separator:a08997c38178b099f8ac38bc190d72cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5c612bbf1834db70d20e18c696b876b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests_1_1sorts.html#aa5c612bbf1834db70d20e18c696b876b">tests::sorts::TEST</a> (bubbleSortTest, edgeCases_negativeSize)</td></tr>
-<tr class="separator:aa5c612bbf1834db70d20e18c696b876b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f1bca21b45c10d3c6f83c18fbd8d7e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests_1_1sorts.html#a7f1bca21b45c10d3c6f83c18fbd8d7e6">tests::sorts::TEST</a> (BubbleSortTest, positiveNos)</td></tr>
+<tr class="separator:a7f1bca21b45c10d3c6f83c18fbd8d7e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67b8f721c0df1f7f9a91b9352bc94bf7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests_1_1sorts.html#a67b8f721c0df1f7f9a91b9352bc94bf7">tests::sorts::TEST</a> (BubbleSortTest, negativeNos)</td></tr>
+<tr class="separator:a67b8f721c0df1f7f9a91b9352bc94bf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f4bca408fe08b5e56ae019442eb1565"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests_1_1sorts.html#a3f4bca408fe08b5e56ae019442eb1565">tests::sorts::TEST</a> (BubbleSortTest, sameValue)</td></tr>
+<tr class="separator:a3f4bca408fe08b5e56ae019442eb1565"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaffb006ff83fe5adc6aa689299aafb3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests_1_1sorts.html#adaffb006ff83fe5adc6aa689299aafb3">tests::sorts::TEST</a> (BubbleSortTest, edgeCases_oneElement)</td></tr>
+<tr class="separator:adaffb006ff83fe5adc6aa689299aafb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04946d6ab778ed88c9bd102b037cd5a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests_1_1sorts.html#a04946d6ab778ed88c9bd102b037cd5a2">tests::sorts::TEST</a> (BubbleSortTest, edgeCases_twoElement)</td></tr>
+<tr class="separator:a04946d6ab778ed88c9bd102b037cd5a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01a40b0672ac3a8e656f910298c0b73b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests_1_1sorts.html#a01a40b0672ac3a8e656f910298c0b73b">tests::sorts::TEST</a> (BubbleSortTest, edgeCases_smallerSize)</td></tr>
+<tr class="separator:a01a40b0672ac3a8e656f910298c0b73b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31083e5527a3543a8f1e86746aa8bb77"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests_1_1sorts.html#a31083e5527a3543a8f1e86746aa8bb77">tests::sorts::TEST</a> (BubbleSortTest, edgeCases_negativeSize)</td></tr>
+<tr class="separator:a31083e5527a3543a8f1e86746aa8bb77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdc7cce65d83cca1c4946b83ab02a009"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests_1_1sorts.html#acdc7cce65d83cca1c4946b83ab02a009">tests::sorts::TEST</a> (BubbleSortTest, lambdaFunc_smallestFirst)</td></tr>
+<tr class="separator:acdc7cce65d83cca1c4946b83ab02a009"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73a5ec9f223370df7039bc82a188c010"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests_1_1sorts.html#a73a5ec9f223370df7039bc82a188c010">tests::sorts::TEST</a> (BubbleSortTest, lambdaFunc_biggestFirst)</td></tr>
+<tr class="separator:a73a5ec9f223370df7039bc82a188c010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa15740dca102926c340afcdbcc5c81df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests_1_1sorts.html#aa15740dca102926c340afcdbcc5c81df">tests::sorts::TEST</a> (BubbleSortTest, functor_smallestFirst)</td></tr>
+<tr class="separator:aa15740dca102926c340afcdbcc5c81df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a389aed74f74263229f6ef94b2ec47c97"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests_1_1sorts.html#a389aed74f74263229f6ef94b2ec47c97">tests::sorts::TEST</a> (BubbleSortTest, functor_biggestFirst)</td></tr>
+<tr class="separator:a389aed74f74263229f6ef94b2ec47c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a964ea070b8d3adfa771745629506a59b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests_1_1sorts.html#a964ea070b8d3adfa771745629506a59b">tests::sorts::TEST</a> (BubbleSortTest, vector_basic)</td></tr>
+<tr class="separator:a964ea070b8d3adfa771745629506a59b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bd46cfeda3388f670d0b358c8111f4d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests_1_1sorts.html#a7bd46cfeda3388f670d0b358c8111f4d">tests::sorts::TEST</a> (BubbleSortTest, vector_functorBuiltin)</td></tr>
+<tr class="separator:a7bd46cfeda3388f670d0b358c8111f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a699b6f7879d1ebf5b942a4c7f89f852d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests_1_1sorts.html#a699b6f7879d1ebf5b942a4c7f89f852d">tests::sorts::TEST</a> (BubbleSortTest, vector_lambdaBuiltin)</td></tr>
+<tr class="separator:a699b6f7879d1ebf5b942a4c7f89f852d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a2ee2a490b3a1f19e0a607e4b2790aa"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests_1_1sorts.html#a4a2ee2a490b3a1f19e0a607e4b2790aa">tests::sorts::operator&lt;&lt;</a> (std::ostream &amp;os, const CustomClass &amp;c)</td></tr>
+<tr class="separator:a4a2ee2a490b3a1f19e0a607e4b2790aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fd0a7c1837d3caa7ecbeb6faa0924ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests_1_1sorts.html#a2fd0a7c1837d3caa7ecbeb6faa0924ba">tests::sorts::TEST</a> (BubbleSortTest, vector_basicCustomClass)</td></tr>
+<tr class="separator:a2fd0a7c1837d3caa7ecbeb6faa0924ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19b4c6bae594a45528796e46e9a8bf86"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests_1_1sorts.html#a19b4c6bae594a45528796e46e9a8bf86">tests::sorts::TEST</a> (BubbleSortTest, vector_functorCustomClass)</td></tr>
+<tr class="separator:a19b4c6bae594a45528796e46e9a8bf86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab8844064f93b52b20df4f4232593118"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetests_1_1sorts.html#aab8844064f93b52b20df4f4232593118">tests::sorts::TEST</a> (BubbleSortTest, vector_lambdaCustomClass)</td></tr>
+<tr class="separator:aab8844064f93b52b20df4f4232593118"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Tests for <a class="el" href="namespacesorts.html#a29e9453bec4a8d7e108cf635731b23e4">sorts::bubbleSort</a> implementation. </p>
+<div class="textblock"><p>Tests for sorts::bubbleSort implementation. </p>
 <dl class="section author"><dt>Author</dt><dd>Michal Staniaszek <a href="#" onclick="location.href='mai'+'lto:'+'mic'+'ha'+'lst'+'@k'+'th.'+'se'; return false;">micha<span style="display: none;">.nosp@m.</span>lst@<span style="display: none;">.nosp@m.</span>kth.s<span style="display: none;">.nosp@m.</span>e</a> </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>Sat Mar 7 20:29:14 2015</dd></dl>
 <p>Tests for Bubblesort. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 8 2015 00:02:20 for alglib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 8 2015 23:59:03 for alglib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
