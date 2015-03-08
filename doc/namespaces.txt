@@ -1,5 +1,11 @@
 /**
- * @namespace sorts
+ * @namespace alglib
+ * @brief The main namespace for the project.
+ *
+ */
+
+/**
+ * @namespace alglib::sorts
  * @brief Contains functions to do with sorting.
  *
  */

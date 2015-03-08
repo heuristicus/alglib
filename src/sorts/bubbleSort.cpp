@@ -37,7 +37,45 @@ namespace alglib {
 		// only need to loop up to the n-1th element because each pair is
 		// compared
 		for (int i = 0; i < size - 1; i++) {
-		    if (array[i] > array[i+1]){
+		    if (!(array[i] < array[i+1])){
+			int tmp = array[i];
+			array[i] = array[i+1];
+			array[i+1] = tmp;
+			sorted = false;
+		    }
+		}
+	    } while (!sorted);
+	}
+
+	/** 
+	 * Do a bubble sort on the given array of integers. The array is modified in
+	 * place. The ordering is defined based on the function that is provided.
+	 * 
+	 * @param array The array to sort
+	 * @param size The size of the array to sort. It is assumed that this is the
+	 * actual size of the array to be sorted. A \p size too large may cause
+	 * overflows, and a size too small will cause only the first \p size
+	 * elements to be sorted. Negative arguments to size will throw an
+	 * exception.
+	 * @param comp Pointer to a function which returns true if the first
+	 * integer takes priority over the second. 
+	 */
+	void bubbleSort(int *array, const int size, bool (*comp)(int, int)){
+	    if (size <= 0) {
+		throw std::invalid_argument("Size must be > 0");//@}
+	    } else if (size == 1) {
+		return; // if the size is 1, the array is already sorted
+	    }
+	
+	    bool sorted;
+	    do {
+		// make the assumption that the array is sorted at the start of each
+		// loop, and set it to false when out of order elements are swapped
+		sorted = true;
+		// only need to loop up to the n-1th element because each pair is
+		// compared
+		for (int i = 0; i < size - 1; i++) {
+		    if (!comp(array[i], array[i+1])){
 			int tmp = array[i];
 			array[i] = array[i+1];
 			array[i+1] = tmp;

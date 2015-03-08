@@ -15,6 +15,7 @@
 namespace alglib {
     namespace sorts {
 	void bubbleSort(int *array, const int size);
+	void bubbleSort(int *array, const int size, bool (*comp)(int, int));
     } // namespace sorts
 } // namespace alglib
 
