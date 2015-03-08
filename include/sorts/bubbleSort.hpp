@@ -12,9 +12,10 @@
 
 #include <stdexcept>
 
-
-namespace sorts {
-    void bubbleSort(int *array, const int size);
-} // namespace sorts
+namespace alglib {
+    namespace sorts {
+	void bubbleSort(int *array, const int size);
+    } // namespace sorts
+} // namespace alglib
 
 #endif // BUBBLESORT_H

@@ -23,10 +23,10 @@ namespace tests {
 
 	    int size = sizeof(unsorted) / sizeof(*unsorted);
     
-	    sorts::bubbleSort(unsorted, size);
+	    alglib::sorts::bubbleSort(unsorted, size);
 
 	    for (int i = 0; i < size; i++) {
-		ASSERT_EQ(unsorted[i], sorted[i]);
+		ASSERT_EQ(sorted[i], unsorted[i]);
 	    }
 	}
 
@@ -41,10 +41,10 @@ namespace tests {
 
 	    int size = sizeof(unsorted) / sizeof(*unsorted);
     
-	    sorts::bubbleSort(unsorted, size);
+	    alglib::sorts::bubbleSort(unsorted, size);
 
 	    for (int i = 0; i < size; i++) {
-		ASSERT_EQ(unsorted[i], sorted[i]);
+		ASSERT_EQ(sorted[i], unsorted[i]);
 	    }
 	}
 
@@ -59,10 +59,10 @@ namespace tests {
 
 	    int size = sizeof(unsorted) / sizeof(*unsorted);
     
-	    sorts::bubbleSort(unsorted, size);
+	    alglib::sorts::bubbleSort(unsorted, size);
 
 	    for (int i = 0; i < size; i++) {
-		ASSERT_EQ(unsorted[i], sorted[i]);
+		ASSERT_EQ(sorted[i], unsorted[i]);
 	    }
 	}
 
@@ -78,28 +78,29 @@ namespace tests {
 
 	    int size = sizeof(unsorted1) / sizeof(*unsorted1);
     
-	    sorts::bubbleSort(unsorted1, size);
-	    sorts::bubbleSort(unsorted2, size);
+	    alglib::sorts::bubbleSort(unsorted1, size);
+	    alglib::sorts::bubbleSort(unsorted2, size);
 
 	    for (int i = 0; i < size; i++) {
-		ASSERT_EQ(unsorted1[i], sorted[i]);
-		ASSERT_EQ(unsorted2[i], sorted[i]);
+		ASSERT_EQ(sorted[i], unsorted1[i]);
+		ASSERT_EQ(sorted[i], unsorted2[i]);
 	    }
 	}
 
 
         /** 
-         * Test that bubbleSort() has the expected behaviour when the \p size given is
-         * smaller than the length of \p array
+         * Test that bubbleSort() has the expected behaviour when the \p size
+         * given is smaller than the length of \p array. We expect that the
+         * first \p size elements in the array to be correctly sorted.
          * 
          */
 	TEST(bubbleSortTest, edgeCases_smallerSize) { 
 	    int unsorted[] = {10, 5, 2, 3, 1, 4, 9, 6, 7, 8};
-	    int sorted[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+	    int sorted[] = {1, 2, 3, 4, 5, 10}; // only the first 6 elements are sorted
 
-	    int size = sizeof(unsorted) / sizeof(*unsorted);
+	    int size = sizeof(unsorted) / sizeof(*unsorted) - 4;
     
-	    sorts::bubbleSort(unsorted, size);
+	    alglib::sorts::bubbleSort(unsorted, size);
 
 	    for (int i = 0; i < size; i++) {
 		ASSERT_EQ(unsorted[i], sorted[i]);
@@ -114,8 +115,8 @@ namespace tests {
 	TEST(bubbleSortTest, edgeCases_negativeSize) { 
 	    int unsorted[] = {4, 2, 3, 5, 1, 7};
 
-	    ASSERT_THROW(sorts::bubbleSort(unsorted, -1), std::invalid_argument);
-	    ASSERT_THROW(sorts::bubbleSort(unsorted, 0), std::invalid_argument);
+	    ASSERT_THROW(alglib::sorts::bubbleSort(unsorted, -1), std::invalid_argument);
+	    ASSERT_THROW(alglib::sorts::bubbleSort(unsorted, 0), std::invalid_argument);
 	}
 	
     } // namespace sorts
