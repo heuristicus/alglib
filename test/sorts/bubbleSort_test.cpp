@@ -13,6 +13,7 @@
 
 namespace tests {
     namespace sorts {
+
         /** 
          * Test that bubbleSort() works for the positive numbers
          * 
@@ -121,9 +122,9 @@ namespace tests {
 
 	/**
 	 * Test that bubbleSort() has the expected behaviour when given a
-	 * comparison function which orders smallest elements first.
+	 * comparison lambda function which orders smallest elements first.
 	 */
-	TEST(BubbleSortTest, func_smallestFirst) {
+	TEST(BubbleSortTest, lambdaFunc_smallestFirst) {
 	    int unsorted[] = {4, 2, 3, 5, 1, 7};
 	    int sorted[] = {1, 2, 3, 4, 5, 7};
 	    int size = sizeof(unsorted) / sizeof(*unsorted);
@@ -138,15 +139,55 @@ namespace tests {
 
 	/**
 	 * Test that bubbleSort() has the expected behaviour when given a
-	 * comparison function which orders largest elements first.
+	 * comparison lambda function which orders largest elements first.
 	 */
-	TEST(BubbleSortTest, func_biggestFirst) {
+	TEST(BubbleSortTest, lambdaFunc_biggestFirst) {
 	    int unsorted[] = {4, 2, 3, 5, 1, 7};
 	    int sorted[] = {7, 5, 4, 3, 2, 1};
 	    int size = sizeof(unsorted) / sizeof(*unsorted);
 
 	    auto comp = [](int a, int b) -> bool {return a > b;};
 	    alglib::sorts::bubbleSort(unsorted, size, comp);
+
+	    for (int i = 0; i < size; i++) {
+		ASSERT_EQ(unsorted[i], sorted[i]);
+	    }
+	}
+
+	/**
+	 * Test that bubbleSort() has the expected behaviour when given a
+	 * comparison functor which orders smallest elements first.
+	 */
+	TEST(BubbleSortTest, functor_smallestFirst) {
+	    int unsorted[] = {4, 2, 3, 5, 1, 7};
+	    int sorted[] = {1, 2, 3, 4, 5, 7};
+	    int size = sizeof(unsorted) / sizeof(*unsorted);
+
+	    struct compSmallestFirst {
+		bool operator()(int a, int b){return a < b;}
+	    } compSF;
+
+	    alglib::sorts::bubbleSort(unsorted, size, compSF);
+
+	    for (int i = 0; i < size; i++) {
+		ASSERT_EQ(unsorted[i], sorted[i]);
+	    }
+	}
+
+	/**
+	 * Test that bubbleSort() has the expected behaviour when given a
+	 * comparison functor which orders largest elements first.
+	 */
+	TEST(BubbleSortTest, functor_biggestFirst) {
+	    int unsorted[] = {4, 2, 3, 5, 1, 7};
+	    int sorted[] = {7, 5, 4, 3, 2, 1};
+	    int size = sizeof(unsorted) / sizeof(*unsorted);
+
+	    struct compBiggestFirst {
+		bool operator()(int a, int b){return a > b;}
+	    } compBF;
+	    
+	    alglib::sorts::bubbleSort(unsorted, size, compBF);
 
 	    for (int i = 0; i < size; i++) {
 		ASSERT_EQ(unsorted[i], sorted[i]);
