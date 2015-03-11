@@ -27,9 +27,34 @@ namespace alglib {
 	    }
 	    std::cout << array[i] << "]" << std::endl;
 	}
-	
+
 	template<typename ArrayType, typename Compare>
 	void bubbleSort(ArrayType *array, const int size, Compare comp){
+	    if (size <= 0) {
+		throw std::invalid_argument("Size must be > 0");
+	    } else if (size == 1) {
+		return; // if the size is 1, the array is already sorted
+	    }
+
+	    // only need to loop up to the n-1th element because each pair is
+	    // compared
+
+	    for (int i = 0; i < size - 1; i++) {
+		// After each pass the last element is in the correct place, so
+		// don't need to check it again.
+		for (int j = 0; j < size - 1 - i; j++) {
+		    if (!comp(array[j], array[j + 1])){
+			ArrayType tmp = array[j];
+			array[j] = array[j + 1];
+			array[j + 1] = tmp;
+		    }
+		}
+	    }
+	}
+
+	
+	template<typename ArrayType, typename Compare>
+	void bubbleSort_naive(ArrayType *array, const int size, Compare comp){
 	    if (size <= 0) {
 		throw std::invalid_argument("Size must be > 0");
 	    } else if (size == 1) {
