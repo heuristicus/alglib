@@ -7,7 +7,7 @@
  * 
  * Tests for Bubblesort.
  */
-#include "sorts/bubbleSort.hpp"
+#include "sorts/bubbleSort.h"
 #include <iostream>
 #include <gtest/gtest.h>
 
