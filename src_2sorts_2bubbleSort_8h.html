@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>alglib: /home/michal/Dropbox/study/code/alglib/include/sorts Directory Reference</title>
+<title>alglib: /home/michal/Dropbox/study/code/alglib/src/sorts/bubbleSort.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -41,7 +41,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -60,6 +60,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -76,24 +81,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_84722f5a9a03275de24a27cae4ed76aa.html">sorts</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d44b4f6cea1c66127e194cd2c62b0ffa.html">sorts</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">sorts Directory Reference</div>  </div>
+<div class="title">bubbleSort.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &lt;stdexcept&gt;</code><br/>
+<code>#include &lt;functional&gt;</code><br/>
+<code>#include &lt;vector&gt;</code><br/>
+<code>#include &lt;iostream&gt;</code><br/>
+<code>#include &quot;<a class="el" href="src_2sorts_2impl_2bubbleSort_8hpp_source.html">impl/bubbleSort.hpp</a>&quot;</code><br/>
+</div>
+<p><a href="src_2sorts_2bubbleSort_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="subdirs"></a>
-Directories</h2></td></tr>
-<tr class="memitem:dir_dfaf777ae629d0226d6a080b6898a263"><td class="memItemLeft" align="right" valign="top">directory &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dir_dfaf777ae629d0226d6a080b6898a263.html">impl</a></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacealglib"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacealglib.html">alglib</a></td></tr>
+<tr class="memdesc:namespacealglib"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main namespace for the project. <br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacealglib_1_1sorts"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacealglib_1_1sorts.html">alglib::sorts</a></td></tr>
+<tr class="memdesc:namespacealglib_1_1sorts"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains functions to do with sorting. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="files"></a>
-Files</h2></td></tr>
-<tr class="memitem:include_2sorts_2bubbleSort_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2sorts_2bubbleSort_8h.html">bubbleSort.h</a> <a href="include_2sorts_2bubbleSort_8h_source.html">[code]</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ab1b1080a11b4aeefa794d94ab5d2c08e"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType &gt; </td></tr>
+<tr class="memitem:ab1b1080a11b4aeefa794d94ab5d2c08e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealglib_1_1sorts.html#ab1b1080a11b4aeefa794d94ab5d2c08e">alglib::sorts::bubbleSort</a> (ArrayType *array, const int size)</td></tr>
+<tr class="separator:ab1b1080a11b4aeefa794d94ab5d2c08e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adab97b6142239314080a9571211cd276"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType , typename Compare &gt; </td></tr>
+<tr class="memitem:adab97b6142239314080a9571211cd276"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealglib_1_1sorts.html#adab97b6142239314080a9571211cd276">alglib::sorts::bubbleSort</a> (ArrayType *array, const int size, Compare comp)</td></tr>
+<tr class="separator:adab97b6142239314080a9571211cd276"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa66a2d461e0c8863ced4a3a33d9fbba7"><td class="memTemplParams" colspan="2">template&lt;typename VectorType &gt; </td></tr>
+<tr class="memitem:aa66a2d461e0c8863ced4a3a33d9fbba7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealglib_1_1sorts.html#aa66a2d461e0c8863ced4a3a33d9fbba7">alglib::sorts::bubbleSort</a> (std::vector&lt; VectorType &gt; &amp;vec)</td></tr>
+<tr class="separator:aa66a2d461e0c8863ced4a3a33d9fbba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a978aa0ec3cb9f43c05bf1e65ce66abbc"><td class="memTemplParams" colspan="2">template&lt;typename VectorType , typename Compare &gt; </td></tr>
+<tr class="memitem:a978aa0ec3cb9f43c05bf1e65ce66abbc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealglib_1_1sorts.html#a978aa0ec3cb9f43c05bf1e65ce66abbc">alglib::sorts::bubbleSort</a> (std::vector&lt; VectorType &gt; &amp;vec, const Compare &amp;comp)</td></tr>
+<tr class="separator:a978aa0ec3cb9f43c05bf1e65ce66abbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

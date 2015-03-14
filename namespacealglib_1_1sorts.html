@@ -41,7 +41,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li class="current"><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -71,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -113,6 +112,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a147b8dfb7743332c08b655b9b2c1f775"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType &gt; </td></tr>
 <tr class="memitem:a147b8dfb7743332c08b655b9b2c1f775"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealglib_1_1sorts.html#a147b8dfb7743332c08b655b9b2c1f775">print_arr</a> (const ArrayType *array, const int size)</td></tr>
 <tr class="separator:a147b8dfb7743332c08b655b9b2c1f775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9df4fdae4088993fb11425a1c513854"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType , typename Compare &gt; </td></tr>
+<tr class="memitem:ae9df4fdae4088993fb11425a1c513854"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealglib_1_1sorts.html#ae9df4fdae4088993fb11425a1c513854">bubbleSort_naive</a> (ArrayType *array, const int size, Compare comp)</td></tr>
+<tr class="separator:ae9df4fdae4088993fb11425a1c513854"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains functions to do with sorting. </p>
@@ -257,6 +259,49 @@ template&lt;typename VectorType , typename Compare &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ae9df4fdae4088993fb11425a1c513854"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArrayType , typename Compare &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void alglib::sorts::bubbleSort_naive </td>
+          <td>(</td>
+          <td class="paramtype">ArrayType *&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Compare&#160;</td>
+          <td class="paramname"><em>comp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Naive bubblesort which loops over the entire array each time, requiring an equality check to be done by the use of two comparisons per element.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>Array to sort </td></tr>
+    <tr><td class="paramname">size</td><td>Size of the <code>array</code> </td></tr>
+    <tr><td class="paramname">comp</td><td>A comparison function to compare elements of <code>ArrayType</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a147b8dfb7743332c08b655b9b2c1f775"></a>
 <div class="memitem">
 <div class="memproto">
@@ -288,7 +333,7 @@ template&lt;typename ArrayType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 8 2015 23:59:03 for alglib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Mar 14 2015 14:07:33 for alglib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
