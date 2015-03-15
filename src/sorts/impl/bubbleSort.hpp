@@ -68,7 +68,8 @@ namespace alglib {
 	 * 
 	 * @param array Array to sort
 	 * @param size Size of the \p array
-	 * @param comp A comparison function to compare elements of \p ArrayType
+	 * @param comp A comparison function to compare elements of \p
+	 * ArrayType. True if the first value has priority over the second.
 	 */
 	template<typename ArrayType, typename Compare>
 	void bubbleSort_naive(ArrayType *array, const int size, Compare comp){
