@@ -61,6 +61,17 @@ namespace alglib {
 	    }
 	}
 
+	template<typename ArrayType>
+	void insertionSort(std::vector<ArrayType>& vec) {
+	    insertionSort(&vec[0], vec.size(), std::less<ArrayType>());
+	}
+    
+
+	template<typename ArrayType, typename Compare>
+	void insertionSort(std::vector<ArrayType>& vec, const Compare& comp) {
+	    insertionSort(&vec[0], vec.size(), comp);
+	}
+
     } // namespace sorts
 } // namespace alglib
 
